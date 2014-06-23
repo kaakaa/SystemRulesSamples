@@ -61,4 +61,16 @@ public class SystemOutSampleTest {
         List<String> actualLog = Arrays.asList(log.getLog().split(newLine));
         assertThat(actualLog, contains("Hi!", "Bye!"));
     }
+
+    @Test
+    public void 途中で一度ログをクリアする(){
+        // when
+        target.sayMultiLine();
+        log.clear();;
+        target.say();
+
+        // then
+        List<String> actualLog = Arrays.asList(log.getLog().split(newLine));
+        assertThat(actualLog, contains("Hi!"));
+    }
 }
