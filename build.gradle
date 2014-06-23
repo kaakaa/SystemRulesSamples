@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'jacoco'
 apply plugin: 'idea'
 
 repositories {
@@ -7,6 +8,14 @@ repositories {
 
 test {
     exclude '**/*Test$*.class'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
 }
 
 dependencies {
