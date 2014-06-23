@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+apply plugin: 'pmd'
 apply plugin: 'jacoco'
 apply plugin: 'idea'
 
@@ -8,6 +12,10 @@ repositories {
 
 test {
     exclude '**/*Test$*.class'
+}
+
+checkstyleMain {
+    ignoreFailures true
 }
 
 jacocoTestReport {
