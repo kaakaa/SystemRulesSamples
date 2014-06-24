@@ -1,4 +1,4 @@
-package org.sample.systemrules;
+package org.sample.systemrules.sysout;
 
 /**
  * Created by kaakaa_hoe on 2014/06/23.

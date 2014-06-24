@@ -1,9 +1,10 @@
-package org.sample.systemrules;
+package org.sample.systemrules.sysout;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
+import org.sample.systemrules.sysout.SystemOutSample;
 
 import java.util.Arrays;
 import java.util.List;
